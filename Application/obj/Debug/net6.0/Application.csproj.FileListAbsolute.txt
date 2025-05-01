@@ -1,0 +1,17 @@
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\bin\Debug\net6.0\Application.deps.json
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\bin\Debug\net6.0\Application.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\bin\Debug\net6.0\Application.pdb
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\bin\Debug\net6.0\Domain.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\bin\Debug\net6.0\Persistence.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\bin\Debug\net6.0\Domain.pdb
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\bin\Debug\net6.0\Persistence.pdb
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\obj\Debug\net6.0\Applicat.44B5EDA2.Up2Date
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\obj\Debug\net6.0\Application.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\obj\Debug\net6.0\refint\Application.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\obj\Debug\net6.0\Application.pdb
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Application\obj\Debug\net6.0\ref\Application.dll

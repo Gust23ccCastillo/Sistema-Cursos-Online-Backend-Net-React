@@ -1,0 +1,17 @@
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\bin\Debug\net6.0\Persistence.deps.json
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\bin\Debug\net6.0\Persistence.runtimeconfig.json
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\bin\Debug\net6.0\Persistence.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\bin\Debug\net6.0\Persistence.pdb
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\bin\Debug\net6.0\Domain.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\bin\Debug\net6.0\Domain.pdb
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\Persistence.csproj.AssemblyReference.cache
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfoInputs.cache
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfo.cs
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\Persistence.csproj.CoreCompileInputs.cache
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\Persiste.61C28332.Up2Date
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\Persistence.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\refint\Persistence.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\Persistence.pdb
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\Persistence.genruntimeconfig.cache
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Persistence\obj\Debug\net6.0\ref\Persistence.dll
