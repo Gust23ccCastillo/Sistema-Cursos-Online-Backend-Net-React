@@ -9,7 +9,7 @@ namespace Application.Queries.Course_Queries
     {
         public class GetOneCourseByIdParameterAsync : IRequest<Course>
         {
-            public int IdParameter { get; set; }
+            public Guid IdParameter { get; set; }
         }
 
         public class QueryHandler : IRequestHandler<GetOneCourseByIdParameterAsync, Course>

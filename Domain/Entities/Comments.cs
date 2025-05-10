@@ -7,7 +7,7 @@ namespace Domain.Entities
     public class Comments
     {
         [Key]
-        public int IdComment { get; set; }
+        public Guid IdComment { get; set; }
 
         public string Student {  get; set; }
 
@@ -16,7 +16,7 @@ namespace Domain.Entities
 
         public string CommentText { get; set; }
 
-        public int IdCourse { get; set; }
+        public Guid IdCourse { get; set; }
 
         [ForeignKey("IdCourse")]
         public Course Course { get; set; }

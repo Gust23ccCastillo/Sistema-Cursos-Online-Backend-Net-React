@@ -10,7 +10,7 @@ namespace Application.Commands.Course_Command
     {
         public class DeleteInfoCourseAsync : IRequest<Unit>
         {
-            public int IdCourseParameter {  get; set; }
+            public Guid IdCourseParameter {  get; set; }
         }
 
         public class Handler : IRequestHandler<DeleteInfoCourseAsync,Unit>

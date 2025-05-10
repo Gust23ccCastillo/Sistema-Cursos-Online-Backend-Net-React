@@ -26,7 +26,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("{idParameter}")]
-        public async Task<ActionResult<Course>> GetSpecificCourseInfo(int idParameter, CancellationToken cancellationToken)
+        public async Task<ActionResult<Course>> GetSpecificCourseInfo(Guid idParameter, CancellationToken cancellationToken)
         {
             return await _mediatorInject.Send(new GetUniqueCourseByParameter
                 .GetOneCourseByIdParameterAsync { IdParameter = idParameter}, cancellationToken);
@@ -40,7 +40,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPut("{idCourseParameter}")]
-        public async Task<ActionResult<Course>> UpdateCourseInformation(int idCourseParameter, 
+        public async Task<ActionResult<Course>> UpdateCourseInformation(Guid idCourseParameter, 
              UpdateCourseInformation.UpdateInformationForCourseAsync updateCourseParameter, CancellationToken cancellationToken)
         {
             updateCourseParameter.IdCourseParameter = idCourseParameter;
@@ -48,7 +48,7 @@ namespace WebApi.Controllers
         }
 
         [HttpDelete("{IdCourseParameter}")]
-        public async Task<ActionResult<Unit>> RemoveCourseInformation(int IdCourseParameter, CancellationToken cancellationToken)
+        public async Task<ActionResult<Unit>> RemoveCourseInformation(Guid IdCourseParameter, CancellationToken cancellationToken)
         {
             return await this._mediatorInject.Send(new DeleteCourseInformation.DeleteInfoCourseAsync
             { IdCourseParameter = IdCourseParameter }, cancellationToken);

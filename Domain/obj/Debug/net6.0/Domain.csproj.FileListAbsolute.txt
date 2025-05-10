@@ -9,3 +9,5 @@ D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Do
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Domain\obj\Debug\net6.0\refint\Domain.dll
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Domain\obj\Debug\net6.0\Domain.pdb
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Domain\obj\Debug\net6.0\ref\Domain.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\Domain\obj\Debug\net6.0\Domain.sourcelink.json

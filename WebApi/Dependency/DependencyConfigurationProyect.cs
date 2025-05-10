@@ -1,8 +1,11 @@
-﻿using Persistence.DbContextApplication;
-using Microsoft.EntityFrameworkCore;
-using Application.Queries.Course_Queries;
-using FluentValidation.AspNetCore;
+﻿
 using Application.Commands.Course_Command.Course_Dtos;
+using Application.Queries.Course_Queries;
+using Domain.Entities;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Persistence.DbContextApplication;
 
 namespace WebApi.Dependency
 {
@@ -16,6 +19,18 @@ namespace WebApi.Dependency
             {
                 configurations.UseSqlServer(configuration.GetRequiredSection("SqlServerConnectionString:StringKey").Value);
             });
+
+            services.AddIdentity<UserApplication, IdentityRole>(options =>
+            {
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 6;
+                options.Password.RequireNonAlphanumeric = false;
+                options.User.RequireUniqueEmail = true;
+            })
+            .AddEntityFrameworkStores<CourseOnlineDbContext>()
+            .AddDefaultTokenProviders();
+
+
 
             //SERVICIO DE CONFIGURACION PARA IMPLENTAR MediatR EN EL PROYECTO
             services.AddMediatR(ConfiguratioOfMediatR => ConfiguratioOfMediatR

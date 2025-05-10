@@ -6,7 +6,7 @@ namespace Domain.Entities
     public class Course
     {
         [Key]
-        public int IdCourse {  get; set; }
+        public Guid IdCourse {  get; set; }
         
        public string Title { get; set; }
 

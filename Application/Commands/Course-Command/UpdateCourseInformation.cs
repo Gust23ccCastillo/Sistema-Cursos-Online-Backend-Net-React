@@ -11,7 +11,7 @@ namespace Application.Commands
     {
         public class UpdateInformationForCourseAsync : IRequest<Course>
         {
-            public int IdCourseParameter { get; set; }
+            public Guid IdCourseParameter { get; set; }
 
             public string TitleParameter { get; set; }
 

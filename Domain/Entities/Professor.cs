@@ -5,7 +5,7 @@ namespace Domain.Entities
     public class Professor
     {
         [Key]
-        public int IdProfessor {  get; set; }
+        public Guid IdProfessor {  get; set; }
 
         public string Name { get; set; }
 
