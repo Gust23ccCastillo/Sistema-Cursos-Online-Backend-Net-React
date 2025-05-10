@@ -12,7 +12,7 @@ namespace Domain.Entities
 
        public string Descriptions { get; set; }
 
-       public DateTime DatetimePublic { get; set; }
+       public DateTime? DatetimePublic { get; set; }
 
         public string? PhotoName { get; set; }
 

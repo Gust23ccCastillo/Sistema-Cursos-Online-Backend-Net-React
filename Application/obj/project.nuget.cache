@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "OYnAGaoHufY=",
+  "dgSpecHash": "DlDa6z3FzVI=",
   "success": true,
   "projectFilePath": "D:\\Proyectos MVC .NET\\System_Courses_Online_Backend\\System_Courses_Online_NET\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kenne\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\kenne\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
-    "C:\\Users\\kenne\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\kenne\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
     "C:\\Users\\kenne\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\kenne\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.36\\microsoft.aspnetcore.cryptography.internal.6.0.36.nupkg.sha512",

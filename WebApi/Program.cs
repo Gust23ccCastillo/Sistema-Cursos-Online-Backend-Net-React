@@ -1,15 +1,19 @@
 using WebApi.Dependency;
+using WebApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 //AGREGAMOS LA CLASE ESTATICA PARA LA CONFIGURACION DE DEPENDENCIAS Y MANTENER EL PROGRAM.CS LIMPIO
 builder.Services.AggregatedDependencyConfiguration(builder.Configuration);
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
 
 var app = builder.Build();
 
+
+app.UseMiddleware<ExecuteExceptionCapture>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

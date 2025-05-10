@@ -1,6 +1,8 @@
 ﻿using Persistence.DbContextApplication;
 using Microsoft.EntityFrameworkCore;
 using Application.Queries.Course_Queries;
+using FluentValidation.AspNetCore;
+using Application.Commands.Course_Command.Course_Dtos;
 
 namespace WebApi.Dependency
 {
@@ -18,6 +20,12 @@ namespace WebApi.Dependency
             //SERVICIO DE CONFIGURACION PARA IMPLENTAR MediatR EN EL PROYECTO
             services.AddMediatR(ConfiguratioOfMediatR => ConfiguratioOfMediatR
                   .RegisterServicesFromAssemblies(typeof(GetAllListCourses.QueryHandler).Assembly));
+
+            //AGREGAR SERVICIO DE Fluent Validation EN EL PROYECTO
+
+            services.AddControllers()
+                .AddFluentValidation(configurationFluentValidationInProyect => 
+                configurationFluentValidationInProyect.RegisterValidatorsFromAssemblyContaining<NewCourseValidatorDto>());
 
             return services;
         }

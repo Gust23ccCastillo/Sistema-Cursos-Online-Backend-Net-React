@@ -1,4 +1,6 @@
-﻿using Domain.Entities;
+﻿using System.Net;
+using Application.ModelCaptureException;
+using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence.DbContextApplication;
@@ -35,7 +37,10 @@ namespace Application.Commands
 
                 if (searchCourseSpecificById == null)
                 {
-                    throw new Exception("El curso a buscar la informacion para actualizar no existe!");
+                    // throw new Exception("El curso a buscar la informacion para actualizar no existe!");
+                    throw new CaptureExceptions(HttpStatusCode.NotFound, new { 
+                        messageInformation = "El curso a buscar la informacion para actualizar no existe!."
+                    });
                 }
 
                 searchCourseSpecificById.Title = request.TitleParameter ?? searchCourseSpecificById.Title;

@@ -279,7 +279,8 @@
           },
           "datetimePublic": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "nullable": true
           },
           "photoName": {
             "type": "string",
@@ -342,7 +343,8 @@
           },
           "datetimePublicParameter": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false

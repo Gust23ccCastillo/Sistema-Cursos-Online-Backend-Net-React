@@ -10,11 +10,11 @@ namespace Application.Commands
     {
         public class NewInfoCourseAsync : IRequest<Unit>
         {
-            public string TitleParameter { get; set; }
+            public string? TitleParameter { get; set; }
 
-            public string DescriptionParameter { get; set; }
+            public string? DescriptionParameter { get; set; }
 
-            public DateTime DatetimePublicParameter { get; set; }
+            public DateTime? DatetimePublicParameter { get; set; }
 
         }
 

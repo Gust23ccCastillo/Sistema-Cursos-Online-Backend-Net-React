@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using System.Net;
+using Application.ModelCaptureException;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence.DbContextApplication;
 
@@ -27,7 +29,9 @@ namespace Application.Commands.Course_Command
                     .FirstAsync(cancellationToken);
                 if(searhSpecificCourseById == null)
                 {
-                    throw new Exception("El course no fue encontrado para eliminarlo!!");
+                    //throw new Exception("El course no fue encontrado para eliminarlo!!");
+                    throw new CaptureExceptions(HttpStatusCode.NotFound, new {messageInformation = 
+                        "El curso no fue encontrado para eliminarlo!!" });
                 }
 
                 this._courseOnlineDbContextInject.Remove(searhSpecificCourseById);
