@@ -20,6 +20,8 @@ namespace WebApi.Dependency
                 configurations.UseSqlServer(configuration.GetRequiredSection("SqlServerConnectionString:StringKey").Value);
             });
 
+         
+
             services.AddIdentity<UserApplication, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = true;
@@ -28,8 +30,8 @@ namespace WebApi.Dependency
                 options.User.RequireUniqueEmail = true;
             })
             .AddEntityFrameworkStores<CourseOnlineDbContext>()
+            .AddSignInManager()
             .AddDefaultTokenProviders();
-
 
 
             //SERVICIO DE CONFIGURACION PARA IMPLENTAR MediatR EN EL PROYECTO

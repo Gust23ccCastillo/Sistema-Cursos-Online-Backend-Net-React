@@ -1,3 +1,4 @@
+using Persistence;
 using WebApi.Dependency;
 using WebApi.Middleware;
 
@@ -7,11 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AggregatedDependencyConfiguration(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-
+           
 
 var app = builder.Build();
 
+//Crear usuario admin al iniciar
+await InsertTestData.InsertInformationInDbTest(app.Services);
 
 app.UseMiddleware<ExecuteExceptionCapture>();
 // Configure the HTTP request pipeline.

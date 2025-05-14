@@ -99,3 +99,5 @@ D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\We
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\obj\Debug\net6.0\WebApi.sourcelink.json
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\bin\Debug\net6.0\Humanizer.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

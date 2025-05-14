@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "WebApi.Controllers.AccountController",
+    "Method": "Login_Account",
+    "RelativePath": "api/Account/login-Account",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginParameters",
+        "Type": "Application.Security.Login_Command.LoginApplicationCommand\u002BLoginAccount",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Domain.Entities.UserApplication",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "WebApi.Controllers.CoursesController",
     "Method": "GetAllCourseInSystem",
     "RelativePath": "api/Courses",
@@ -55,7 +81,7 @@
     "Parameters": [
       {
         "Name": "idCourseParameter",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       },
       {
@@ -86,7 +112,7 @@
     "Parameters": [
       {
         "Name": "IdCourseParameter",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -112,7 +138,7 @@
     "Parameters": [
       {
         "Name": "idParameter",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
