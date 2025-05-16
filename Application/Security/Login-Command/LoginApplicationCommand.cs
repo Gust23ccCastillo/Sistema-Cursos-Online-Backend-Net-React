@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using Application.ModelCaptureException;
+using Application.Security.Login_Command.Dtos;
 using Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -9,14 +10,14 @@ namespace Application.Security.Login_Command
 {
     public class LoginApplicationCommand
     {
-        public class LoginAccount : IRequest<UserApplication>
+        public class LoginAccount : IRequest<UserInformationDto>
         {
             public string Email { get; set; }
 
             public string Password { get; set; }
         }
 
-        public class CommandHandler : IRequestHandler<LoginAccount, UserApplication>
+        public class CommandHandler : IRequestHandler<LoginAccount, UserInformationDto>
         {
             private readonly CourseOnlineDbContext courseOnlineDbContextInject;
             private readonly UserManager<UserApplication> userManagerInject;
@@ -31,7 +32,7 @@ namespace Application.Security.Login_Command
                 this.signInManagerInject = signInManagerInject;
             }
 
-            public async Task<UserApplication> Handle(LoginAccount request, CancellationToken cancellationToken)
+            public async Task<UserInformationDto> Handle(LoginAccount request, CancellationToken cancellationToken)
             {
                 var searh_UserAccount_Email = await this.userManagerInject.FindByEmailAsync(request.Email);
                 if (searh_UserAccount_Email == null) {
@@ -46,7 +47,14 @@ namespace Application.Security.Login_Command
                         "Email / Contrasena Incorrecta!!, Porfavor intentalo nuevamente.");
                 }
 
-                return searh_UserAccount_Email;
+                return new UserInformationDto
+                {
+                    FullName = searh_UserAccount_Email.FullName,
+                    TokenAccess = "Token",
+                    UserName = searh_UserAccount_Email.UserName,
+                    Email = searh_UserAccount_Email.Email,
+                    UrlImage = null
+                };
 
             }
         }

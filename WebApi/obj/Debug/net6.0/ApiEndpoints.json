@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Domain.Entities.UserApplication",
+        "Type": "Application.Security.Login_Command.Dtos.UserInformationDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
