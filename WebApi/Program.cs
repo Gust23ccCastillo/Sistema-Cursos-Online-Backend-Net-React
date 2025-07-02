@@ -7,8 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 //AGREGAMOS LA CLASE ESTATICA PARA LA CONFIGURACION DE DEPENDENCIAS Y MANTENER EL PROGRAM.CS LIMPIO
 builder.Services.AggregatedDependencyConfiguration(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-           
+
 
 var app = builder.Build();
 
@@ -23,8 +22,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();https://localhost:7021
+app.UseHttpsRedirection();//https://localhost:7021
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

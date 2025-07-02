@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7NYyTpwOC68=",
+  "dgSpecHash": "lkWKA7KWis4=",
   "success": true,
   "projectFilePath": "D:\\Proyectos MVC .NET\\System_Courses_Online_Backend\\System_Courses_Online_NET\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kenne\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\kenne\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\kenne\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\kenne\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
     "C:\\Users\\kenne\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

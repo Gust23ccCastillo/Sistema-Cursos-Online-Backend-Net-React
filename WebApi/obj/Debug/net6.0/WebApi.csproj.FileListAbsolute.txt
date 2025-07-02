@@ -77,7 +77,6 @@ D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\We
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfoInputs.cache
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfo.cs
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\obj\Debug\net6.0\WebApi.csproj.CoreCompileInputs.cache
-D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\obj\Debug\net6.0\scopedcss\bundle\WebApi.styles.css
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\obj\Debug\net6.0\staticwebassets.build.json
@@ -101,3 +100,7 @@ D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\We
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\obj\Debug\net6.0\WebApi.sourcelink.json
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\bin\Debug\net6.0\Humanizer.dll
 D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\bin\Debug\net6.0\Security.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\bin\Debug\net6.0\Security.pdb
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Proyectos MVC .NET\System_Courses_Online_Backend\System_Courses_Online_NET\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs

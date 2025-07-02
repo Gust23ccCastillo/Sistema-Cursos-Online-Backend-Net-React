@@ -16,6 +16,12 @@ namespace Application.Commands
 
             public DateTime? DatetimePublicParameter { get; set; }
 
+            public List<Guid> ListProfessor {  get; set; }
+
+            public decimal Price { get; set; }
+
+            public decimal OfferPrice { get; set; }
+
         }
 
         public class CommandHandler : IRequestHandler<NewInfoCourseAsync, Unit>
@@ -36,14 +42,44 @@ namespace Application.Commands
                     var existingCourse = await this.VerifyExistinCourse(request.TitleParameter);
                     if(existingCourse == false)
                     {
+                        Guid _IdCourse = Guid.NewGuid();
                         var newCourse = new Course
                         {
+                            IdCourse = _IdCourse,
                             Title = request.TitleParameter,
                             Descriptions = request.DescriptionParameter,
                             DatetimePublic = request.DatetimePublicParameter
                         };
 
                         _courseOnlineDbContextInject.tb_Course.Add(newCourse);
+
+
+                        //Crear la Asignacion de un curso nuevo con sus profesores
+                        if(request.ListProfessor != null)
+                        {
+                            foreach(var Id in request.ListProfessor)
+                            {
+                                var Asigned_Course_Professor = new Course_Professor
+                                {
+                                    IdCourse = newCourse.IdCourse,
+                                    IdProfessor = Id
+                                };
+
+                                _courseOnlineDbContextInject.tb_Course_Professor.Add(Asigned_Course_Professor);
+                            }
+                        }
+
+                        //Agregar logica para insertar el precio del curso
+                        var priceAsinedCourse = new Price
+                        {
+                            IdCourse = _IdCourse,
+                            IdPrice = Guid.NewGuid(),
+                            CurrentPrice = request.Price,
+                            PromotionalPrice = request.OfferPrice
+                        };
+
+                        _courseOnlineDbContextInject.tb_Price.Add(priceAsinedCourse);
+
                         var resultToOperation = await _courseOnlineDbContextInject.SaveChangesAsync(cancellationToken);
 
                         if (resultToOperation > 0)

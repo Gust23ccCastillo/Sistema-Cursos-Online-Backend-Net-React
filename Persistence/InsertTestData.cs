@@ -24,6 +24,14 @@ namespace Persistence
                // Aquí puedes asignar un rol si tienes roles creados
                await userManager.CreateAsync(createUser, "Ken234");
 
+                //Otro usuario creado
+                //{
+                //    "firstName": "Kevin",
+                //  "lastName": "Jimenez",
+                //  "email": "KevJime34@gmail.com",
+                //  "password": "KevJim4567"
+                //}
+
             }
         }
     }

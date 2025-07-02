@@ -14,17 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginAccount"
+                "$ref": "#/components/schemas/LoginAccountAsync"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginAccount"
+                "$ref": "#/components/schemas/LoginAccountAsync"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginAccount"
+                "$ref": "#/components/schemas/LoginAccountAsync"
               }
             }
           }
@@ -53,7 +53,84 @@
         }
       }
     },
-    "/api/Courses": {
+    "/api/Account/Register-Account": {
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterAccountAsync"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterAccountAsync"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterAccountAsync"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInformationDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInformationDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInformationDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Account/GetUserAccount": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInformationDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInformationDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInformationDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/GetAllCourseInSystem": {
       "get": {
         "tags": [
           "Courses"
@@ -66,7 +143,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Course"
+                    "$ref": "#/components/schemas/CourseInformationDto"
                   }
                 }
               },
@@ -74,7 +151,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Course"
+                    "$ref": "#/components/schemas/CourseInformationDto"
                   }
                 }
               },
@@ -82,14 +159,56 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Course"
+                    "$ref": "#/components/schemas/CourseInformationDto"
                   }
                 }
               }
             }
           }
         }
-      },
+      }
+    },
+    "/api/Courses/GetSpecificCourseInfo/{idParameter}": {
+      "get": {
+        "tags": [
+          "Courses"
+        ],
+        "parameters": [
+          {
+            "name": "idParameter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseInformationDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseInformationDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CourseInformationDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Courses/CreateCourseInformation": {
       "post": {
         "tags": [
           "Courses"
@@ -137,47 +256,7 @@
         }
       }
     },
-    "/api/Courses/{idParameter}": {
-      "get": {
-        "tags": [
-          "Courses"
-        ],
-        "parameters": [
-          {
-            "name": "idParameter",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Course"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Course"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Course"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/Courses/{idCourseParameter}": {
+    "/api/Courses/UpdateCourseInformation/{idCourseParameter}": {
       "put": {
         "tags": [
           "Courses"
@@ -218,17 +297,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Course"
+                  "$ref": "#/components/schemas/Unit"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Course"
+                  "$ref": "#/components/schemas/Unit"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Course"
+                  "$ref": "#/components/schemas/Unit"
                 }
               }
             }
@@ -236,7 +315,7 @@
         }
       }
     },
-    "/api/Courses/{IdCourseParameter}": {
+    "/api/Courses/RemoveCourseInformation/{IdCourseParameter}": {
       "delete": {
         "tags": [
           "Courses"
@@ -275,11 +354,236 @@
           }
         }
       }
+    },
+    "/api/ProfessorInformations/List-Professor-Info": {
+      "get": {
+        "tags": [
+          "ProfessorInformations"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProfessorDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProfessorDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProfessorDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProfessorInformations/Get-Professor-By-Parameter/{IdParameter}": {
+      "get": {
+        "tags": [
+          "ProfessorInformations"
+        ],
+        "parameters": [
+          {
+            "name": "IdParameter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfessorDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfessorDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfessorDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProfessorInformations/Create-Professor-Info": {
+      "post": {
+        "tags": [
+          "ProfessorInformations"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewProfessorInfoAsync"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewProfessorInfoAsync"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewProfessorInfoAsync"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProfessorInformations/Update-Professor-Info/{IdParameter}": {
+      "put": {
+        "tags": [
+          "ProfessorInformations"
+        ],
+        "parameters": [
+          {
+            "name": "IdParameter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateInformationAsync"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateInformationAsync"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateInformationAsync"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProfessorInformations/Delete-Professor-Info/{IdParameter}": {
+      "delete": {
+        "tags": [
+          "ProfessorInformations"
+        ],
+        "parameters": [
+          {
+            "name": "IdParameter",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unit"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
-      "Comments": {
+      "CommentsDto": {
         "type": "object",
         "properties": {
           "idComment": {
@@ -291,8 +595,6 @@
             "nullable": true
           },
           "score": {
-            "maximum": 6,
-            "minimum": 1,
             "type": "integer",
             "format": "int32"
           },
@@ -303,14 +605,11 @@
           "idCourse": {
             "type": "string",
             "format": "uuid"
-          },
-          "course": {
-            "$ref": "#/components/schemas/Course"
           }
         },
         "additionalProperties": false
       },
-      "Course": {
+      "CourseInformationDto": {
         "type": "object",
         "properties": {
           "idCourse": {
@@ -338,47 +637,27 @@
             "type": "string",
             "nullable": true
           },
-          "priceAsigned": {
-            "$ref": "#/components/schemas/Price"
-          },
-          "asignedComments": {
+          "professors": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Comments"
+              "$ref": "#/components/schemas/ProfessorInformationDto"
             },
             "nullable": true
           },
-          "professorLink": {
+          "price": {
+            "$ref": "#/components/schemas/PriceDto"
+          },
+          "comments": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/Course_Professor"
+              "$ref": "#/components/schemas/CommentsDto"
             },
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "Course_Professor": {
-        "type": "object",
-        "properties": {
-          "idCourse": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "course": {
-            "$ref": "#/components/schemas/Course"
-          },
-          "idProfessor": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "professor": {
-            "$ref": "#/components/schemas/Professor"
-          }
-        },
-        "additionalProperties": false
-      },
-      "LoginAccount": {
+      "LoginAccountAsync": {
         "type": "object",
         "properties": {
           "email": {
@@ -407,11 +686,45 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
+          },
+          "listProfessor": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "offerPrice": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
       },
-      "Price": {
+      "NewProfessorInfoAsync": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "grade": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PriceDto": {
         "type": "object",
         "properties": {
           "idPrice": {
@@ -430,14 +743,33 @@
           "idCourse": {
             "type": "string",
             "format": "uuid"
-          },
-          "course": {
-            "$ref": "#/components/schemas/Course"
           }
         },
         "additionalProperties": false
       },
-      "Professor": {
+      "ProfessorDto": {
+        "type": "object",
+        "properties": {
+          "professorId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "grade": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProfessorInformationDto": {
         "type": "object",
         "properties": {
           "idProfessor": {
@@ -463,12 +795,27 @@
           "urlPhoto": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterAccountAsync": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "nullable": true
           },
-          "courseLink": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Course_Professor"
-            },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -476,6 +823,28 @@
       },
       "Unit": {
         "type": "object",
+        "additionalProperties": false
+      },
+      "UpdateInformationAsync": {
+        "type": "object",
+        "properties": {
+          "idProfessor": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "grade": {
+            "type": "string",
+            "nullable": true
+          }
+        },
         "additionalProperties": false
       },
       "UpdateInformationForCourseAsync": {
@@ -496,6 +865,24 @@
           "datetimePublicParameter": {
             "type": "string",
             "format": "date-time",
+            "nullable": true
+          },
+          "listProfessors": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "offerPrice": {
+            "type": "number",
+            "format": "double",
             "nullable": true
           }
         },
@@ -527,6 +914,18 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "JWT Authorization header using the Bearer scheme.",
+        "scheme": "bearer"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

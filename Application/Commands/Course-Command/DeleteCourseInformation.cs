@@ -24,12 +24,42 @@ namespace Application.Commands.Course_Command
 
             public async Task<Unit> Handle(DeleteInfoCourseAsync request, CancellationToken cancellationToken)
             {
+                //Eliminar Primero Profesores Asignados al Course Antes de Eliminar el Curso
+                var instructorsAsinedCourse = await this._courseOnlineDbContextInject
+                    .tb_Course_Professor.Where(search => search.IdCourse == request.IdCourseParameter).ToListAsync();
+
+                foreach (var id_Instructor_Remove in instructorsAsinedCourse)
+                {
+                    this._courseOnlineDbContextInject.Remove(id_Instructor_Remove);
+                }
+
+                //Obtener la lista de comentarios para eliminarlos
+                var obtainCommentaryList = await this._courseOnlineDbContextInject.tb_Comments
+                    .Where(search => search.IdCourse == request.IdCourseParameter).ToListAsync();
+                foreach(var itemCommentary in obtainCommentaryList)
+                {
+                    _courseOnlineDbContextInject.tb_Comments.Remove(itemCommentary);
+                }
+
+
+                //Eliminar precio del curso de la tabla precio
+                var priceofCourseSpecific =  await this._courseOnlineDbContextInject.tb_Price
+                    .Where(search => search.IdCourse == request.IdCourseParameter).FirstOrDefaultAsync();
+
+                if (priceofCourseSpecific != null)
+                {
+                    this._courseOnlineDbContextInject.Remove(priceofCourseSpecific);
+                }
+
+
+
+
                 var searhSpecificCourseById = await this._courseOnlineDbContextInject
                     .tb_Course.Where(searchCourse => searchCourse.IdCourse == request.IdCourseParameter)
                     .FirstAsync(cancellationToken);
                 if(searhSpecificCourseById == null)
                 {
-                    //throw new Exception("El course no fue encontrado para eliminarlo!!");
+                  
                     throw new CaptureExceptions(HttpStatusCode.NotFound, new {messageInformation = 
                         "El curso no fue encontrado para eliminarlo!!" });
                 }
